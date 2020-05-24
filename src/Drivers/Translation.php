@@ -56,7 +56,8 @@ abstract class Translation
      */
     public function getSourceLanguageTranslationsWith($language)
     {
-        $sourceTranslations = $this->allTranslationsFor($this->sourceLanguage);
+        // $sourceTranslations = $this->allTranslationsFor($this->sourceLanguage);
+        $sourceTranslations = $this->allTranslationsFor($language);
         $languageTranslations = $this->allTranslationsFor($language);
 
         return $sourceTranslations->map(function ($groups, $type) use ($language, $languageTranslations) {
